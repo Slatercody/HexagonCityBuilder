@@ -35,7 +35,11 @@ Game.NewBoard = function (gameSize, players, colors) {
     return board;
 };
 
-Game.Resources = ["R1", "R2", "R3", "R4", "R5", "R6", "blank"];
+//PORTAL:
+//If you settle here you get to place your settlement anywhere you want on your next turn
+//Also discard your hand on your next turn
+
+Game.Resources = ["R1", "R2", "R3", "R4", "R5", "R6", "portal"];
 
 Game.GetNewResource = function (NR, index) {
     var invalidResource = true;

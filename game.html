@@ -3,11 +3,72 @@
 <head>
     <script type="text/javascript" src="logic.js"></script>
     <title>Page Title</title>
+    <style type="text/css">
+        #board{
+            margin-left:20%;
+            margin-top:100px;
+        }
+        .space {
+            margin-left:20px;
+        }
+        .tile {
+	        width: 100px;
+	        height: 55px;
+	        background: red;
+	        position: absolute;
+        }
+        .tile:before {
+	        content: "";
+	        position: absolute;
+	        top: -25px;
+	        left: 0;
+	        width: 0;
+	        height: 0;
+	        border-left: 50px solid transparent;
+	        border-right: 50px solid transparent;
+	        border-bottom: 25px solid red;
+        }
+        .tile:after {
+	        content: "";
+	        position: absolute;
+	        bottom: -25px;
+	        left: 0;
+	        width: 0;
+	        height: 0;
+	        border-left: 50px solid transparent;
+	        border-right: 50px solid transparent;
+	        border-top: 25px solid red;
+        }
+
+    </style>
 </head>
 <body>
-
-    <h1>This is a Heading</h1>
-    <p>This is a paragraph.</p>
+    <div id="board">
+        <div>
+            <div class="tile"></div><div class="space"></div>
+        </div>
+        <div>
+            <div class="tile"></div><div class="space"></div>
+        </div>
+        <div>
+            <div class="tile"></div><div class="space"></div>
+        </div>
+        <div>
+            <div class="tile"></div><div class="space"></div>
+        </div>
+        <div>
+            <div class="tile"></div><div class="space"></div>
+        </div>
+        <div>
+            <div class="tile"></div><div class="space"></div>
+        </div>
+        <div>
+            <div class="tile"></div><div class="space"></div>
+        </div>
+        <div>
+            <div class="tile"></div><div class="space"></div>
+        </div>
+    </div>
 
 </body>
 </html>
