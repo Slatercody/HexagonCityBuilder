@@ -1,2 +1,2 @@
-# RogueRPG
-Fun rouge RPG in JavaScript
+# Hexagon City Builder
+A name that isnt CIV or Catan
