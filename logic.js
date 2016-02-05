@@ -7,8 +7,18 @@ Game.NewSquare = function (index, resourceArray) {
     } else {
         var resource = Game.Resource("blank");
     }
+    var hexa = document.createElement('div');
+    hexa.className = "hexagon";
 
-    return { index: index, resource: resource , owned: false, owner: undefined };
+    var tile = document.createElement('a');
+    tile.className = "tile " + resource.type;
+    tile.onclick = OHBABY
+    //tile.innerHTML = "<a onlclick='OHBABY();'></a>"
+    //var a = document.createElement('a');
+    //a. = "OHBABY()";
+    //tile.appendChild(a);
+    hexa.appendChild(tile);
+    return { index: index, resource: resource, owned: false, owner: undefined, markup: hexa};
 };
 
 Game.NewPlayer = function (name, color) {
@@ -64,4 +74,61 @@ function GRA(a) {
     }
 };
 
-console.log(Game.NewBoard(8,null,null));
+function MakeBoard(board, gameSize) {
+    var style = document.createElement('style');
+    style.type = 'text/css';
+    var csshtml = "";
+    for (var i = 0; i < gameSize; i++) {
+        csshtml += '.row' + i + '{margin-left:' + i * 52 + 'px;}';
+    };
+    style.innerHTML = csshtml;
+    document.getElementsByTagName('head')[0].appendChild(style);
+
+    var gui = document.createElement('div');
+    gui.id = "board";
+    var outer = 0;
+    var inner = gameSize;
+    var timesAround = 0;
+    var index = 0;
+    for (i = 1; i <= gameSize; i++) {
+        var row = document.createElement('div');
+        row.className = "row row" + (gameSize - i);
+        for (var x = 0; x < i; x++) {
+            row.appendChild(board[index].markup)
+            index++;
+        }
+        gui.appendChild(row);
+    }
+    for (i = gameSize - 1; i > 0; i--) {
+        var row = document.createElement('div');
+        row.className = "row row" + (gameSize - i);
+        for (var x = 0; x < i; x++) {
+            row.appendChild(board[index].markup)
+            index++;
+        }
+        gui.appendChild(row);
+    }
+
+    //console.log(board.length)
+    //while (outer < board.length/2) {
+    //    var row = document.createElement('div');
+    //    row.className = "row" + timesAround;
+    //    while (inner != 0) {
+    //        row.appendChild(board[outer].markup);
+    //        inner--;
+    //        outer++;
+    //    };
+    //    timesAround++;
+    //    inner = gameSize - timesAround;
+    //    gui.appendChild(row);
+    //}
+    //console.log(gui)
+    document.getElementById('body').appendChild(gui);
+    //console.log(document.getElementsByTagName('body'))
+};
+//MakeBoard(Game.NewBoard(8,null,null), 8);
+
+function OHBABY() {
+    console.log("OH BABY")
+}
+OHBABY();

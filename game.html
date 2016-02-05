@@ -5,11 +5,30 @@
     <title>Page Title</title>
     <style type="text/css">
         #board{
-            margin-left:20%;
             margin-top:100px;
+            left:25%;
+            position:relative;
+            width:50%;
         }
-        .space {
-            margin-left:20px;
+        .hexagon{
+            display:inline-block;
+            margin:52px;
+        }
+        .row{
+            margin-top:-24px
+        }
+        .tile:hover {
+            background:aqua;
+        }
+        .tile:hover:before {
+	        border-bottom: 25px solid aqua;
+        }
+        .tile:hover:after {
+	        border-top: 25px solid aqua;
+        }
+        .row1{
+            margin-top:-21px;
+            margin-left:52px;
         }
         .tile {
 	        width: 100px;
@@ -17,58 +36,104 @@
 	        background: red;
 	        position: absolute;
         }
-        .tile:before {
+        .tile:before, .tile:after {
 	        content: "";
 	        position: absolute;
-	        top: -25px;
+
 	        left: 0;
 	        width: 0;
 	        height: 0;
 	        border-left: 50px solid transparent;
 	        border-right: 50px solid transparent;
-	        border-bottom: 25px solid red;
+
+        }
+        .tile:before{
+            top: -25px;
+            border-bottom: 25px solid red;
         }
         .tile:after {
-	        content: "";
-	        position: absolute;
 	        bottom: -25px;
-	        left: 0;
-	        width: 0;
-	        height: 0;
-	        border-left: 50px solid transparent;
-	        border-right: 50px solid transparent;
 	        border-top: 25px solid red;
         }
 
     </style>
 </head>
-<body>
-    <div id="board">
-        <div>
-            <div class="tile"></div><div class="space"></div>
+<body onload="MakeBoard(Game.NewBoard(8, null, null), 8)">
+    <div id="body"></div>
+    <!--<div id="board">
+        <div class="row1">
+            <div class="hexagon">
+                <div class="tile"></div>
+            </div>
+            <div class="hexagon">
+                <div class="tile"></div>
+            </div>
+            <div class="hexagon">
+                <div class="tile"></div>
+            </div>
+            <div class="hexagon">
+                <div class="tile"></div>
+            </div>
+            <div class="hexagon">
+                <div class="tile"></div>
+            </div>
+            <div class="hexagon">
+                <div class="tile"></div>
+            </div>
+            <div class="hexagon">
+                <div class="tile"></div>
+            </div>
         </div>
-        <div>
-            <div class="tile"></div><div class="space"></div>
+        <div class="row">
+            <div class="hexagon">
+                <div class="tile"></div>
+            </div>
+            <div class="hexagon">
+                <div class="tile"></div>
+            </div>
+            <div class="hexagon">
+                <div class="tile"></div>
+            </div>
+            <div class="hexagon">
+                <div class="tile"></div>
+            </div>
+            <div class="hexagon">
+                <div class="tile"></div>
+            </div>
+            <div class="hexagon">
+                <div class="tile"></div>
+            </div>
+            <div class="hexagon">
+                <div class="tile"></div>
+            </div>
+            <div class="hexagon">
+                <div class="tile"></div>
+            </div>
         </div>
-        <div>
-            <div class="tile"></div><div class="space"></div>
+        <div class="row1">
+            <div class="hexagon">
+                <div class="tile"></div>
+            </div>
+            <div class="hexagon">
+                <div class="tile"></div>
+            </div>
+            <div class="hexagon">
+                <div class="tile"></div>
+            </div>
+            <div class="hexagon">
+                <div class="tile"></div>
+            </div>
+            <div class="hexagon">
+                <div class="tile"></div>
+            </div>
+            <div class="hexagon">
+                <div class="tile"></div>
+            </div>
+            <div class="hexagon">
+                <div class="tile"></div>
+            </div>
         </div>
-        <div>
-            <div class="tile"></div><div class="space"></div>
-        </div>
-        <div>
-            <div class="tile"></div><div class="space"></div>
-        </div>
-        <div>
-            <div class="tile"></div><div class="space"></div>
-        </div>
-        <div>
-            <div class="tile"></div><div class="space"></div>
-        </div>
-        <div>
-            <div class="tile"></div><div class="space"></div>
-        </div>
-    </div>
+    </div>-->
 
 </body>
 </html>
