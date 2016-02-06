@@ -36,20 +36,27 @@ Game.NewBoard = function (gameSize, players, colors) {
         amountAllowed: Math.floor((1/3) * numResources),
         actualAmount: [0,0,0,0,0,0]
     };
-    for (var x = 0; x < numResources - 5; x++) {
+    for (var x = 0; x < numResources; x++) {
         board[x] = Game.NewSquare(x, resourceArray);
     };
-    while (board.length != numResources) {
-        board.push(Game.NewSquare(board.length-1))
-    }
+    //while (board.length != numResources) {
+    //    board.push(Game.NewSquare(board.length-1))
+    //}
     return board;
 };
 
-//PORTAL:
+//PORTAL: (GONE)
 //If you settle here you get to place your settlement anywhere you want on your next turn
 //Also discard your hand on your next turn
 
-Game.Resources = ["R1", "R2", "R3", "R4", "R5", "R6", "portal"];
+//R1 GOLD
+//R2 WOOD
+//R3 STONE
+//R4 WHEAT
+//R5 FISH (WATER)
+//R6 COWS
+
+Game.Resources = ["R1", "R2", "R3", "R4", "R5", "R6"];
 
 Game.GetNewResource = function (NR, index) {
     var invalidResource = true;

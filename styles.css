@@ -1,0 +1,157 @@
+﻿/*POSITION OF ALL TILES*/
+#board {
+    margin-top: 100px;
+    left: 0%;
+    position: relative;
+    width: 100%;
+}
+
+/*POSITION OF EACH ROW OF TILES*/
+.row {
+    margin-top: -24px;
+}
+
+/*POSITION OF DIV HOLDING EACH TILE*/
+.hexagon {
+    display: inline-block;
+    margin: 52px;
+}
+
+/*TILE HOVERS*/
+.tile:hover {
+    border-left: 25px solid aqua;
+    border-right: 25px solid aqua;
+}
+
+.tile:hover:before {
+    border-bottom: 25px solid aqua;
+}
+
+.tile:hover:after {
+    border-top: 25px solid aqua;
+}
+
+
+
+/****************************************/
+/**** CLASS SPECIFIC TILE ATTRIBUTES ****/
+/******************lol*******************/
+
+/*RESOURCE 1 GOLD*/
+.R1.tile {
+    width: 100px;
+    height: 55px;
+    background: red;
+    position: absolute;
+}
+
+.R1.tile:before {
+    top: -25px;
+    border-bottom: 25px solid red;
+}
+
+.R1.tile:after {
+    bottom: -25px;
+    border-top: 25px solid red;
+}
+
+/*RESOURCE 2 WOOD*/
+.R2.tile {
+    width: 100px;
+    height: 55px;
+    background: red;
+    position: absolute;
+}
+
+.R2.tile:before {
+    top: -25px;
+    border-bottom: 25px solid red;
+}
+
+.R2.tile:after {
+    bottom: -25px;
+    border-top: 25px solid red;
+}
+
+/*RESOURCE 3 STONE*/
+.R3.tile {
+    width: 100px;
+    height: 55px;
+    background: red;
+    position: absolute;
+}
+
+.R3.tile:before {
+    top: -25px;
+    border-bottom: 25px solid red;
+}
+
+.R3.tile:after {
+    bottom: -25px;
+    border-top: 25px solid red;
+}
+
+/*RESOURCE 4 WHEAT*/
+.R4.tile {
+    width: 100px;
+    height: 55px;
+    background: red;
+    position: absolute;
+}
+
+.R4.tile:before {
+    top: -25px;
+    border-bottom: 25px solid red;
+}
+
+.R4.tile:after {
+    bottom: -25px;
+    border-top: 25px solid red;
+}
+
+/*RESOURCE 5 FISH (WATER)*/
+.R5.tile {
+    width: 100px;
+    height: 55px;
+    background: red;
+    position: absolute;
+}
+
+.R5.tile:before {
+    top: -25px;
+    border-bottom: 25px solid red;
+}
+
+.R5.tile:after {
+    bottom: -25px;
+    border-top: 25px solid red;
+}
+
+/*RESOURCE 1 COWS*/
+.R6.tile {
+    width: 100px;
+    height: 55px;
+    background: red;
+    position: absolute;
+}
+
+.R6.tile:before {
+    top: -25px;
+    border-bottom: 25px solid red;
+}
+
+.R6.tile:after {
+    bottom: -25px;
+    border-top: 25px solid red;
+}
+
+/*GENERIC TILE ATTRIBUTES*/
+.tile:before, .tile:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
