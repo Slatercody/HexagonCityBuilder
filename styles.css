@@ -17,22 +17,6 @@
     margin: 52px;
 }
 
-/*TILE HOVERS*/
-.tile:hover {
-    border-left: 25px solid aqua;
-    border-right: 25px solid aqua;
-}
-
-.tile:hover:before {
-    border-bottom: 25px solid aqua;
-}
-
-.tile:hover:after {
-    border-top: 25px solid aqua;
-}
-
-
-
 /****************************************/
 /**** CLASS SPECIFIC TILE ATTRIBUTES ****/
 /******************lol*******************/
@@ -154,4 +138,19 @@
     height: 0;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
+}
+
+/*TILE HOVERS*/
+.tile:hover {
+    /*border-left: 25px solid aqua;
+    border-right: 25px solid aqua;*/
+    background: aqua;
+}
+
+.tile:hover:before {
+    border-bottom: 25px solid aqua;
+}
+
+.tile:hover:after {
+    border-top: 25px solid aqua;
 }
